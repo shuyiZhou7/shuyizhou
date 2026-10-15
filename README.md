@@ -13,7 +13,12 @@ quant/
   backtest.py   # 向量化回测引擎（含交易成本、次日执行）
   metrics.py    # 绩效指标：收益、年化、波动、夏普、最大回撤、胜率
   plot.py       # 价格/均线/买卖点、净值对比、回撤图
-run_backtest.py # 命令行入口
+  indicators.py # 技术指标：MA、EMA、MACD、RSI、布林带、ATR、ADX
+  patterns.py   # K 线形态：十字星、锤子线、射击之星、看涨/看跌吞没
+  analysis.py   # 走势综合分析：趋势判断、支撑阻力、信号汇总
+  kline_plot.py # K 线图：蜡烛图 + 均线 + 布林带 + 成交量 + MACD + RSI
+run_backtest.py # 回测入口
+analyze_kline.py # K 线走势分析入口
 data/           # 示例数据：SPY 日线（2021-10 ~ 2026-10，来自 IBKR，未做分红复权）
 tests/          # 单元测试
 ```
@@ -34,6 +39,21 @@ python -m pytest -q
 ```
 
 结果输出到 `output/`：一张图表（`.png`）和每笔交易明细（`.trades.csv`）。
+
+### K 线走势分析
+
+```bash
+python analyze_kline.py --symbol AAPL                       # 在线下载
+python analyze_kline.py --symbol SPY --csv data/SPY_daily.csv --bars 120
+```
+
+输出一份文字报告和一张 K 线图（`output/<代码>_kline.png`，红涨绿跌）：
+
+- **趋势判断**：根据价格与 MA20/60/120 的位置、均线排列、MA20 斜率、MACD 打出多空得分（-6 ~ +6），
+  再用 ADX 判断趋势强弱；ADX < 20 或得分在 ±1 以内判为「震荡」
+- **支撑 / 阻力位**：近 120 根 K 线中的局部高低点，相距 1% 以内的价位合并
+- **指标提示**：RSI 超买/超卖、布林带突破、MACD 金叉/死叉
+- **K 线形态**：近 5 日出现的十字星、锤子线、射击之星、吞没形态
 
 ### 策略规则（SmaCross）
 
