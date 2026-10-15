@@ -19,9 +19,12 @@ quant/
   kline_plot.py # K 线图：蜡烛图 + 均线 + 布林带 + 成交量 + MACD + RSI
   intraday.py   # 日内策略：开盘区间突破（ORB）、VWAP 均值回归
   risk_guard.py # 账户风控检查：仓位、止损、到期、交易频率、当日亏损
+  price_action.py # 价格行为学：波段点、市场结构（HH/HL/LH/LL）、H1/H2/L1/L2 回测
+  pa_plot.py    # 价格行为标注图
 run_backtest.py # 回测入口
 analyze_kline.py # K 线走势分析入口
 run_intraday.py # 日内策略对比入口
+run_price_action.py # 价格行为学 H1/H2 回测对比入口
 data/           # 示例数据（来自 IBKR，未做分红复权）：SPY 日线 2021-10 ~ 2026-10，
                 #   SPY/QQQ 30 分钟线 2026-06 ~ 2026-10
 tests/          # 单元测试
@@ -92,6 +95,18 @@ python -m quant.risk_guard --summary summary.json --positions positions.json \
 | 当日亏损上限 | 3% |
 
 有违规时输出警报并以退出码 1 结束。
+
+### 价格行为学（Al Brooks 风格）
+
+```bash
+python run_price_action.py
+```
+
+- **波段点**：左右各 3 根 K 线内的最高/最低点，需要再走 3 根 K 线才能确认（不使用未来数据）
+- **市场结构**：最近的波段高点是 HH 且波段低点是 HL 为上升趋势；LH + LL 为下降趋势；其余为区间
+- **H2 / L2**：上升趋势（EMA20 向上且结构为 HH+HL）中，回调里第二次有 K 线突破前一根 K 线高点时入场；
+  止损放在回调最低点，目标 1R 或 2R。L2 是下降趋势中的镜像。H1/L1 是第一次突破就入场
+- 输出 `output/SPY_price_action.png`：标注波段点、趋势背景色和每笔 H2/L2 交易
 
 ### 策略规则（SmaCross）
 
