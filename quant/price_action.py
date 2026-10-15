@@ -73,6 +73,31 @@ class PATrade:
     ret: float        # 扣除成本后的收益率（1 倍仓位）
 
 
+SIGNAL_FILTERS = {
+    "any": "不过滤",
+    "bull": "阳线（收盘 > 开盘）",
+    "strong": "阳线且收在 K 线上方 1/3",
+    "strong_small": "阳线、收在上方 1/3，且振幅不超过近 20 根平均振幅的 1.5 倍",
+}
+
+
+def signal_bar_ok(df: pd.DataFrame, signal: str = "any") -> np.ndarray:
+    """做多信号 K 线的质量（做空时价格已取负，同一套规则即为"阴线收在低位"）。"""
+    if signal not in SIGNAL_FILTERS:
+        raise ValueError(f"未知的 signal: {signal}")
+    o, h, l, c = (df[k].to_numpy() for k in ("open", "high", "low", "close"))
+    rng = h - l
+    ok = np.ones(len(df), dtype=bool)
+    if signal in ("bull", "strong", "strong_small"):
+        ok &= c > o
+    if signal in ("strong", "strong_small"):
+        ok &= (c - l) >= rng * 2 / 3
+    if signal == "strong_small":
+        avg = pd.Series(rng).rolling(20, min_periods=5).mean().to_numpy()
+        ok &= ~(rng > 1.5 * avg)
+    return ok
+
+
 def _invert(df: pd.DataFrame) -> pd.DataFrame:
     return pd.DataFrame({"open": -df["open"], "high": -df["low"], "low": -df["high"],
                          "close": -df["close"]}, index=df.index)
@@ -80,9 +105,10 @@ def _invert(df: pd.DataFrame) -> pd.DataFrame:
 
 def _run_long(df: pd.DataFrame, count: int, target_r: float, ema_n: int, swing_n: int,
               max_hold: int, cost_bps: float, session_end: np.ndarray | None,
-              require_structure: bool) -> list[tuple]:
+              require_structure: bool, signal: str = "any") -> list[tuple]:
     o, h, l, c = (df[k].to_numpy() for k in ("open", "high", "low", "close"))
     ema = df["close"].ewm(span=ema_n, adjust=False).mean().to_numpy()
+    sig_ok = signal_bar_ok(df, signal)
     struct = structure_state(df, find_swings(df, swing_n)).to_numpy() if require_structure else None
     n = len(df)
     trades = []
@@ -94,6 +120,7 @@ def _run_long(df: pd.DataFrame, count: int, target_r: float, ema_n: int, swing_n
         ctx_ok = i - 1 >= ema_n and ema[i - 1] > ema[i - 1 - 5]
         if require_structure:
             ctx_ok = ctx_ok and struct[i - 1] == 1
+        ctx_ok = ctx_ok and sig_ok[i - 1]
         can_enter = session_end is None or not session_end[i]
         triggered = False
         if in_pb and cnt == count - 1 and ctx_ok and can_enter and h[i] > h[i - 1]:
@@ -138,12 +165,14 @@ def _run_long(df: pd.DataFrame, count: int, target_r: float, ema_n: int, swing_n
 
 def backtest_hl(df: pd.DataFrame, count: int = 2, sides=(1, -1), target_r: float = 2.0,
                 ema_n: int = 20, swing_n: int = 3, max_hold: int = 20, cost_bps: float = 1.0,
-                intraday: bool = False, require_structure: bool = True) -> list[PATrade]:
+                intraday: bool = False, require_structure: bool = True,
+                signal: str = "any") -> list[PATrade]:
     """
     count=2 即 H2/L2，count=1 即 H1/L1。
     入场条件：EMA20 在上升（做空时下降）且市场结构为上升趋势（HH+HL），回调中第 count 次
     有 K 线向上突破前一根 K 线高点时入场。止损放在回调最低点，目标 target_r 倍风险。
     同一根 K 线同时触及止损和目标按止损处理。intraday=True 时每天收盘强制平仓。
+    signal：信号 K 线（入场前一根）的质量要求，见 signal_bar_ok。
     """
     session_end = None
     if intraday:
@@ -153,7 +182,7 @@ def backtest_hl(df: pd.DataFrame, count: int = 2, sides=(1, -1), target_r: float
     for side in sides:
         data = df if side == 1 else _invert(df)
         for i, j, e, s, x, reason, r, ret in _run_long(data, count, target_r, ema_n, swing_n, max_hold,
-                                                         cost_bps, session_end, require_structure):
+                                                         cost_bps, session_end, require_structure, signal):
             out.append(PATrade(df.index[i], df.index[j], side, side * e, side * s, side * x, reason, r, ret))
     return sorted(out, key=lambda t: t.entry_time)
 

@@ -25,7 +25,7 @@ run_backtest.py # 回测入口
 analyze_kline.py # K 线走势分析入口
 run_intraday.py # 日内策略对比入口
 run_price_action.py # 价格行为学 H1/H2 回测对比入口
-data/           # 示例数据（来自 IBKR，未做分红复权）：SPY 日线 2021-10 ~ 2026-10，
+data/           # 示例数据（来自 IBKR，未做分红复权）：SPY/QQQ/IWM 日线 2021-10 ~ 2026-10，
                 #   SPY/QQQ 30 分钟线 2026-06 ~ 2026-10
 tests/          # 单元测试
 ```
@@ -107,6 +107,9 @@ python run_price_action.py
 - **H2 / L2**：上升趋势（EMA20 向上且结构为 HH+HL）中，回调里第二次有 K 线突破前一根 K 线高点时入场；
   止损放在回调最低点，目标 1R 或 2R。L2 是下降趋势中的镜像。H1/L1 是第一次突破就入场
 - 输出 `output/SPY_price_action.png`：标注波段点、趋势背景色和每笔 H2/L2 交易
+- `--signals`：对比 H2 信号 K 线的质量过滤（不过滤 / 阳线 / 阳线收在上方 1/3 / 再加振幅不过大）。
+  在 SPY 日线上过滤明显改善结果，但在 QQQ、IWM 日线上没有重现，样本也很小（每个组合 4~28 笔），
+  不能当作可靠结论
 
 ### 策略规则（SmaCross）
 

@@ -60,3 +60,22 @@ def test_short_is_mirror_of_long():
     assert [t.entry_time for t in longs] == [t.entry_time for t in shorts]
     assert [t.r for t in longs] == pytest.approx([t.r for t in shorts])
     assert all(t.stop > t.entry for t in shorts)
+
+
+def test_signal_bar_filters():
+    from quant.price_action import signal_bar_ok
+    df = pd.DataFrame({"open":  [10, 10, 10, 10.0],
+                       "close": [11, 9, 10.2, 10.9],
+                       "high":  [11.1, 10.5, 11, 11],
+                       "low":   [9.9, 8.9, 9.8, 9.9]})
+    assert signal_bar_ok(df, "bull").tolist() == [True, False, True, True]
+    assert signal_bar_ok(df, "strong").tolist() == [True, False, False, True]
+
+
+def test_filtered_trades_have_good_signal_bars():
+    from quant.price_action import signal_bar_ok
+    df = from_close(zigzag_up(15))
+    ok = pd.Series(signal_bar_ok(df, "strong"), index=df.index)
+    trades = backtest_hl(df, count=2, sides=(1,), swing_n=2, ema_n=10, signal="strong")
+    for t in trades:
+        assert ok.iloc[df.index.get_loc(t.entry_time) - 1]
