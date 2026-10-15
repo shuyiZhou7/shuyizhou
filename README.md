@@ -18,6 +18,7 @@ quant/
   analysis.py   # 走势综合分析：趋势判断、支撑阻力、信号汇总
   kline_plot.py # K 线图：蜡烛图 + 均线 + 布林带 + 成交量 + MACD + RSI
   intraday.py   # 日内策略：开盘区间突破（ORB）、VWAP 均值回归
+  risk_guard.py # 账户风控检查：仓位、止损、到期、交易频率、当日亏损
 run_backtest.py # 回测入口
 analyze_kline.py # K 线走势分析入口
 run_intraday.py # 日内策略对比入口
@@ -70,6 +71,27 @@ python run_intraday.py --symbols SPY QQQ --cost-bps 1
 
 2026-06-29 ~ 2026-10-14（76 个交易日）的结果：ORB 在 SPY 和 QQQ 上都亏损；VWAP 回归小幅盈利，
 但 t 值都低于 2，统计上不显著。样本只有约 3 个月，结论仅供参考。
+
+### 账户风控检查
+
+```bash
+python -m quant.risk_guard --summary summary.json --positions positions.json \
+    --trades trades.json --start-nav 5000
+```
+
+输入是 IBKR 接口 `get_account_summary`、`get_account_positions`、`get_account_trades(TODAY)` 的 JSON。
+默认规则（可在 `Rules` 里修改）：
+
+| 规则 | 默认值 |
+|---|---|
+| 单个仓位成本占净值上限 | 5% |
+| 同一标的合计占净值上限 | 10% |
+| 期权浮亏止损 | 成本的 50% |
+| 持有当天到期的期权 | 警报 |
+| 每天订单数上限 | 5 |
+| 当日亏损上限 | 3% |
+
+有违规时输出警报并以退出码 1 结束。
 
 ### 策略规则（SmaCross）
 
