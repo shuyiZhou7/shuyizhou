@@ -1,5 +1,7 @@
 # shuyizhou
 
+另见 [`EnglishWatch/`](EnglishWatch/README.md)：Apple Watch 背单词 App。
+
 ## 美股量化回测框架
 
 一个简洁的 Python 回测框架，内置双均线（SMA Cross）策略。
