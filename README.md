@@ -17,9 +17,12 @@ quant/
   patterns.py   # K 线形态：十字星、锤子线、射击之星、看涨/看跌吞没
   analysis.py   # 走势综合分析：趋势判断、支撑阻力、信号汇总
   kline_plot.py # K 线图：蜡烛图 + 均线 + 布林带 + 成交量 + MACD + RSI
+  intraday.py   # 日内策略：开盘区间突破（ORB）、VWAP 均值回归
 run_backtest.py # 回测入口
 analyze_kline.py # K 线走势分析入口
-data/           # 示例数据：SPY 日线（2021-10 ~ 2026-10，来自 IBKR，未做分红复权）
+run_intraday.py # 日内策略对比入口
+data/           # 示例数据（来自 IBKR，未做分红复权）：SPY 日线 2021-10 ~ 2026-10，
+                #   SPY/QQQ 30 分钟线 2026-06 ~ 2026-10
 tests/          # 单元测试
 ```
 
@@ -54,6 +57,19 @@ python analyze_kline.py --symbol SPY --csv data/SPY_daily.csv --bars 120
 - **支撑 / 阻力位**：近 120 根 K 线中的局部高低点，相距 1% 以内的价位合并
 - **指标提示**：RSI 超买/超卖、布林带突破、MACD 金叉/死叉
 - **K 线形态**：近 5 日出现的十字星、锤子线、射击之星、吞没形态
+
+### 日内策略对比
+
+```bash
+python run_intraday.py --symbols SPY QQQ --cost-bps 1
+```
+
+- **ORB 开盘区间突破**：开盘前 30/60 分钟的高低点构成区间，先突破哪边就往哪边做，止损放在区间另一侧或中点，收盘平仓
+- **VWAP 均值回归**：价格偏离 VWAP 超过阈值时反向入场，目标回到 VWAP，带固定止损，收盘平仓
+- 同一根 K 线内同时触及入场价和止损价时按亏损处理（保守假设）
+
+2026-06-29 ~ 2026-10-14（76 个交易日）的结果：ORB 在 SPY 和 QQQ 上都亏损；VWAP 回归小幅盈利，
+但 t 值都低于 2，统计上不显著。样本只有约 3 个月，结论仅供参考。
 
 ### 策略规则（SmaCross）
 
