@@ -21,6 +21,7 @@ quant/
   kline_plot.py # K 线图：蜡烛图 + 均线 + 布林带 + 成交量 + MACD + RSI
   intraday.py   # 日内策略：开盘区间突破（ORB）、VWAP 均值回归
   risk_guard.py # 账户风控检查：仓位、止损、到期、交易频率、当日亏损
+  daily_review.py # 每日交易复盘：按「QQQ 短线期权快打」规则逐笔检查
   price_action.py # 价格行为学：波段点、市场结构（HH/HL/LH/LL）、H1/H2/L1/L2 回测
   pa_plot.py    # 价格行为标注图
 run_backtest.py # 回测入口
@@ -97,6 +98,23 @@ python -m quant.risk_guard --summary summary.json --positions positions.json \
 | 当日亏损上限 | 3% |
 
 有违规时输出警报并以退出码 1 结束。
+
+### 每日交易复盘
+
+```bash
+python -m quant.daily_review --trades trades.json --start-nav 5000          # 最近一个交易日
+python -m quant.daily_review --trades trades.json --navs navs.json --all    # 每天一行汇总
+```
+
+输入是 IBKR `get_account_trades` 的 JSON。按以下规则（`StrategyRules` 可改）逐笔检查并生成 Markdown 日报：
+
+| 类别 | 规则 |
+|---|---|
+| 入场 | 只做 QQQ/SPY；期权单价 $1–3；9:45–11:30、13:00–15:00；权利金 ≤ 净值 5%；每天 ≤ 5 笔；周五 12:00 后不开仓 |
+| 纪律 | 连亏 2 笔后停止；当日亏损 ≥ 3% 后停止 |
+| 出场 | 持仓 ≤ 20 分钟（宽限 5 分钟）；亏损不超过 15%（宽限 5%）；不隔夜；不拿到到期 |
+
+IBKR 成交记录没有行权价和到期日，买卖按股票代码先进先出配对，持仓时间和收益率是近似值；已实现盈亏是 IBKR 的准确数字。
 
 ### 价格行为学（Al Brooks 风格）
 
