@@ -1,0 +1,702 @@
+[
+ {
+  "word": "abandon",
+  "phonetic": "/əˈbændən/",
+  "meaning": "v. 放弃；抛弃",
+  "example": "They had to abandon the car in the snow.",
+  "exampleZh": "他们不得不把车丢在雪地里。"
+ },
+ {
+  "word": "ability",
+  "phonetic": "/əˈbɪləti/",
+  "meaning": "n. 能力",
+  "example": "She has the ability to learn fast.",
+  "exampleZh": "她有快速学习的能力。"
+ },
+ {
+  "word": "accept",
+  "phonetic": "/əkˈsept/",
+  "meaning": "v. 接受",
+  "example": "Do you accept credit cards?",
+  "exampleZh": "你们收信用卡吗？"
+ },
+ {
+  "word": "access",
+  "phonetic": "/ˈækses/",
+  "meaning": "n./v. 进入；使用",
+  "example": "I can't access the Wi-Fi.",
+  "exampleZh": "我连不上 Wi-Fi。"
+ },
+ {
+  "word": "achieve",
+  "phonetic": "/əˈtʃiːv/",
+  "meaning": "v. 实现；达到",
+  "example": "Hard work helped him achieve his goal.",
+  "exampleZh": "努力让他实现了目标。"
+ },
+ {
+  "word": "actually",
+  "phonetic": "/ˈæktʃuəli/",
+  "meaning": "adv. 实际上；其实",
+  "example": "Actually, I've never been there.",
+  "exampleZh": "其实我从没去过那里。"
+ },
+ {
+  "word": "advice",
+  "phonetic": "/ədˈvaɪs/",
+  "meaning": "n. 建议",
+  "example": "Can you give me some advice?",
+  "exampleZh": "你能给我一些建议吗？"
+ },
+ {
+  "word": "afford",
+  "phonetic": "/əˈfɔːrd/",
+  "meaning": "v. 负担得起",
+  "example": "I can't afford a new phone.",
+  "exampleZh": "我买不起新手机。"
+ },
+ {
+  "word": "airport",
+  "phonetic": "/ˈerpɔːrt/",
+  "meaning": "n. 机场",
+  "example": "How do I get to the airport?",
+  "exampleZh": "去机场怎么走？"
+ },
+ {
+  "word": "allow",
+  "phonetic": "/əˈlaʊ/",
+  "meaning": "v. 允许",
+  "example": "Smoking is not allowed here.",
+  "exampleZh": "这里不允许吸烟。"
+ },
+ {
+  "word": "announce",
+  "phonetic": "/əˈnaʊns/",
+  "meaning": "v. 宣布",
+  "example": "They announced the flight delay.",
+  "exampleZh": "他们宣布了航班延误。"
+ },
+ {
+  "word": "anxious",
+  "phonetic": "/ˈæŋkʃəs/",
+  "meaning": "adj. 焦虑的",
+  "example": "I feel anxious before exams.",
+  "exampleZh": "考试前我很焦虑。"
+ },
+ {
+  "word": "apply",
+  "phonetic": "/əˈplaɪ/",
+  "meaning": "v. 申请；应用",
+  "example": "I want to apply for this job.",
+  "exampleZh": "我想申请这份工作。"
+ },
+ {
+  "word": "appointment",
+  "phonetic": "/əˈpɔɪntmənt/",
+  "meaning": "n. 预约",
+  "example": "I have a doctor's appointment at three.",
+  "exampleZh": "我三点约了医生。"
+ },
+ {
+  "word": "approach",
+  "phonetic": "/əˈproʊtʃ/",
+  "meaning": "n./v. 方法；接近",
+  "example": "Let's try a different approach.",
+  "exampleZh": "我们换个方法试试。"
+ },
+ {
+  "word": "available",
+  "phonetic": "/əˈveɪləbl/",
+  "meaning": "adj. 可用的；有空的",
+  "example": "Are you available tomorrow?",
+  "exampleZh": "你明天有空吗？"
+ },
+ {
+  "word": "average",
+  "phonetic": "/ˈævərɪdʒ/",
+  "meaning": "adj./n. 平均（的）",
+  "example": "The average price is ten dollars.",
+  "exampleZh": "平均价格是十美元。"
+ },
+ {
+  "word": "avoid",
+  "phonetic": "/əˈvɔɪd/",
+  "meaning": "v. 避免",
+  "example": "Try to avoid rush hour.",
+  "exampleZh": "尽量避开高峰期。"
+ },
+ {
+  "word": "aware",
+  "phonetic": "/əˈwer/",
+  "meaning": "adj. 意识到的",
+  "example": "Are you aware of the risks?",
+  "exampleZh": "你意识到风险了吗？"
+ },
+ {
+  "word": "balance",
+  "phonetic": "/ˈbæləns/",
+  "meaning": "n. 平衡；余额",
+  "example": "Check your account balance.",
+  "exampleZh": "查一下你的账户余额。"
+ },
+ {
+  "word": "benefit",
+  "phonetic": "/ˈbenɪfɪt/",
+  "meaning": "n./v. 好处；受益",
+  "example": "Exercise has many benefits.",
+  "exampleZh": "运动有很多好处。"
+ },
+ {
+  "word": "borrow",
+  "phonetic": "/ˈbɑːroʊ/",
+  "meaning": "v. 借（入）",
+  "example": "Can I borrow your pen?",
+  "exampleZh": "我能借你的笔吗？"
+ },
+ {
+  "word": "budget",
+  "phonetic": "/ˈbʌdʒɪt/",
+  "meaning": "n. 预算",
+  "example": "We need to stick to our budget.",
+  "exampleZh": "我们要控制在预算内。"
+ },
+ {
+  "word": "calm",
+  "phonetic": "/kɑːm/",
+  "meaning": "adj. 冷静的",
+  "example": "Stay calm and think.",
+  "exampleZh": "保持冷静，好好想想。"
+ },
+ {
+  "word": "cancel",
+  "phonetic": "/ˈkænsl/",
+  "meaning": "v. 取消",
+  "example": "My flight was cancelled.",
+  "exampleZh": "我的航班被取消了。"
+ },
+ {
+  "word": "challenge",
+  "phonetic": "/ˈtʃælɪndʒ/",
+  "meaning": "n. 挑战",
+  "example": "Learning English is a fun challenge.",
+  "exampleZh": "学英语是一个有趣的挑战。"
+ },
+ {
+  "word": "compare",
+  "phonetic": "/kəmˈper/",
+  "meaning": "v. 比较",
+  "example": "Compare the prices before you buy.",
+  "exampleZh": "买之前比较一下价格。"
+ },
+ {
+  "word": "confident",
+  "phonetic": "/ˈkɑːnfɪdənt/",
+  "meaning": "adj. 自信的",
+  "example": "She sounds confident.",
+  "exampleZh": "她听起来很自信。"
+ },
+ {
+  "word": "confirm",
+  "phonetic": "/kənˈfɜːrm/",
+  "meaning": "v. 确认",
+  "example": "Please confirm your booking.",
+  "exampleZh": "请确认你的预订。"
+ },
+ {
+  "word": "consider",
+  "phonetic": "/kənˈsɪdər/",
+  "meaning": "v. 考虑",
+  "example": "I'll consider your offer.",
+  "exampleZh": "我会考虑你的提议。"
+ },
+ {
+  "word": "convenient",
+  "phonetic": "/kənˈviːniənt/",
+  "meaning": "adj. 方便的",
+  "example": "Is Monday convenient for you?",
+  "exampleZh": "周一你方便吗？"
+ },
+ {
+  "word": "currency",
+  "phonetic": "/ˈkɜːrənsi/",
+  "meaning": "n. 货币",
+  "example": "What currency do they use in Dubai?",
+  "exampleZh": "迪拜用什么货币？"
+ },
+ {
+  "word": "customer",
+  "phonetic": "/ˈkʌstəmər/",
+  "meaning": "n. 顾客",
+  "example": "The customer is always right.",
+  "exampleZh": "顾客永远是对的。"
+ },
+ {
+  "word": "decision",
+  "phonetic": "/dɪˈsɪʒn/",
+  "meaning": "n. 决定",
+  "example": "It was a hard decision.",
+  "exampleZh": "那是个艰难的决定。"
+ },
+ {
+  "word": "delay",
+  "phonetic": "/dɪˈleɪ/",
+  "meaning": "n./v. 延误；推迟",
+  "example": "Sorry for the delay.",
+  "exampleZh": "抱歉耽误了。"
+ },
+ {
+  "word": "deposit",
+  "phonetic": "/dɪˈpɑːzɪt/",
+  "meaning": "n./v. 存款；押金",
+  "example": "I made a deposit this morning.",
+  "exampleZh": "我今早存了一笔钱。"
+ },
+ {
+  "word": "describe",
+  "phonetic": "/dɪˈskraɪb/",
+  "meaning": "v. 描述",
+  "example": "Can you describe the man?",
+  "exampleZh": "你能描述一下那个人吗？"
+ },
+ {
+  "word": "destination",
+  "phonetic": "/ˌdestɪˈneɪʃn/",
+  "meaning": "n. 目的地",
+  "example": "Paris is a popular destination.",
+  "exampleZh": "巴黎是热门目的地。"
+ },
+ {
+  "word": "develop",
+  "phonetic": "/dɪˈveləp/",
+  "meaning": "v. 发展；开发",
+  "example": "They develop mobile apps.",
+  "exampleZh": "他们开发手机应用。"
+ },
+ {
+  "word": "discount",
+  "phonetic": "/ˈdɪskaʊnt/",
+  "meaning": "n. 折扣",
+  "example": "Is there a student discount?",
+  "exampleZh": "有学生折扣吗？"
+ },
+ {
+  "word": "efficient",
+  "phonetic": "/ɪˈfɪʃnt/",
+  "meaning": "adj. 高效的",
+  "example": "This method is more efficient.",
+  "exampleZh": "这个方法更高效。"
+ },
+ {
+  "word": "emergency",
+  "phonetic": "/ɪˈmɜːrdʒənsi/",
+  "meaning": "n. 紧急情况",
+  "example": "Call 911 in an emergency.",
+  "exampleZh": "紧急情况请拨打 911。"
+ },
+ {
+  "word": "encourage",
+  "phonetic": "/ɪnˈkɜːrɪdʒ/",
+  "meaning": "v. 鼓励",
+  "example": "My parents always encourage me.",
+  "exampleZh": "父母总是鼓励我。"
+ },
+ {
+  "word": "environment",
+  "phonetic": "/ɪnˈvaɪrənmənt/",
+  "meaning": "n. 环境",
+  "example": "We should protect the environment.",
+  "exampleZh": "我们应该保护环境。"
+ },
+ {
+  "word": "especially",
+  "phonetic": "/ɪˈspeʃəli/",
+  "meaning": "adv. 尤其",
+  "example": "I love fruit, especially mangoes.",
+  "exampleZh": "我爱吃水果，尤其是芒果。"
+ },
+ {
+  "word": "exchange",
+  "phonetic": "/ɪksˈtʃeɪndʒ/",
+  "meaning": "n./v. 兑换；交换",
+  "example": "Where can I exchange money?",
+  "exampleZh": "我在哪儿可以换钱？"
+ },
+ {
+  "word": "expect",
+  "phonetic": "/ɪkˈspekt/",
+  "meaning": "v. 预计；期待",
+  "example": "I expect the price to rise.",
+  "exampleZh": "我预计价格会上涨。"
+ },
+ {
+  "word": "experience",
+  "phonetic": "/ɪkˈspɪriəns/",
+  "meaning": "n. 经验；经历",
+  "example": "Do you have any experience?",
+  "exampleZh": "你有经验吗？"
+ },
+ {
+  "word": "explain",
+  "phonetic": "/ɪkˈspleɪn/",
+  "meaning": "v. 解释",
+  "example": "Could you explain that again?",
+  "exampleZh": "你能再解释一遍吗？"
+ },
+ {
+  "word": "familiar",
+  "phonetic": "/fəˈmɪliər/",
+  "meaning": "adj. 熟悉的",
+  "example": "This song sounds familiar.",
+  "exampleZh": "这首歌听起来很熟悉。"
+ },
+ {
+  "word": "fee",
+  "phonetic": "/fiː/",
+  "meaning": "n. 费用",
+  "example": "There is no booking fee.",
+  "exampleZh": "没有预订费。"
+ },
+ {
+  "word": "flexible",
+  "phonetic": "/ˈfleksəbl/",
+  "meaning": "adj. 灵活的",
+  "example": "My schedule is flexible.",
+  "exampleZh": "我的时间很灵活。"
+ },
+ {
+  "word": "forecast",
+  "phonetic": "/ˈfɔːrkæst/",
+  "meaning": "n. 预报；预测",
+  "example": "The weather forecast says rain.",
+  "exampleZh": "天气预报说有雨。"
+ },
+ {
+  "word": "frequent",
+  "phonetic": "/ˈfriːkwənt/",
+  "meaning": "adj. 频繁的",
+  "example": "Frequent trading increases costs.",
+  "exampleZh": "频繁交易会增加成本。"
+ },
+ {
+  "word": "gain",
+  "phonetic": "/ɡeɪn/",
+  "meaning": "n./v. 收益；获得",
+  "example": "No pain, no gain.",
+  "exampleZh": "不劳无获。"
+ },
+ {
+  "word": "goal",
+  "phonetic": "/ɡoʊl/",
+  "meaning": "n. 目标",
+  "example": "What is your goal this year?",
+  "exampleZh": "你今年的目标是什么？"
+ },
+ {
+  "word": "habit",
+  "phonetic": "/ˈhæbɪt/",
+  "meaning": "n. 习惯",
+  "example": "Reading is a good habit.",
+  "exampleZh": "阅读是个好习惯。"
+ },
+ {
+  "word": "improve",
+  "phonetic": "/ɪmˈpruːv/",
+  "meaning": "v. 提高；改善",
+  "example": "I want to improve my English.",
+  "exampleZh": "我想提高我的英语。"
+ },
+ {
+  "word": "include",
+  "phonetic": "/ɪnˈkluːd/",
+  "meaning": "v. 包括",
+  "example": "Is breakfast included?",
+  "exampleZh": "含早餐吗？"
+ },
+ {
+  "word": "increase",
+  "phonetic": "/ɪnˈkriːs/",
+  "meaning": "v. 增加",
+  "example": "Prices increased last month.",
+  "exampleZh": "上个月价格上涨了。"
+ },
+ {
+  "word": "instead",
+  "phonetic": "/ɪnˈsted/",
+  "meaning": "adv. 代替；反而",
+  "example": "Let's walk instead.",
+  "exampleZh": "我们改成走路吧。"
+ },
+ {
+  "word": "interest",
+  "phonetic": "/ˈɪntrəst/",
+  "meaning": "n. 兴趣；利息",
+  "example": "The bank pays 4% interest.",
+  "exampleZh": "银行支付 4% 的利息。"
+ },
+ {
+  "word": "invest",
+  "phonetic": "/ɪnˈvest/",
+  "meaning": "v. 投资",
+  "example": "He invests in index funds.",
+  "exampleZh": "他投资指数基金。"
+ },
+ {
+  "word": "journey",
+  "phonetic": "/ˈdʒɜːrni/",
+  "meaning": "n. 旅程",
+  "example": "Have a safe journey!",
+  "exampleZh": "一路平安！"
+ },
+ {
+  "word": "limit",
+  "phonetic": "/ˈlɪmɪt/",
+  "meaning": "n./v. 限制；上限",
+  "example": "Set a daily loss limit.",
+  "exampleZh": "设定每日亏损上限。"
+ },
+ {
+  "word": "luggage",
+  "phonetic": "/ˈlʌɡɪdʒ/",
+  "meaning": "n. 行李",
+  "example": "Where can I pick up my luggage?",
+  "exampleZh": "我在哪里取行李？"
+ },
+ {
+  "word": "manage",
+  "phonetic": "/ˈmænɪdʒ/",
+  "meaning": "v. 管理；设法做到",
+  "example": "You need to manage your risk.",
+  "exampleZh": "你需要管理风险。"
+ },
+ {
+  "word": "mention",
+  "phonetic": "/ˈmenʃn/",
+  "meaning": "v. 提到",
+  "example": "Don't mention it.",
+  "exampleZh": "不客气。"
+ },
+ {
+  "word": "mistake",
+  "phonetic": "/mɪˈsteɪk/",
+  "meaning": "n. 错误",
+  "example": "Everyone makes mistakes.",
+  "exampleZh": "人人都会犯错。"
+ },
+ {
+  "word": "necessary",
+  "phonetic": "/ˈnesəseri/",
+  "meaning": "adj. 必要的",
+  "example": "Is it necessary to book?",
+  "exampleZh": "需要预订吗？"
+ },
+ {
+  "word": "negotiate",
+  "phonetic": "/nɪˈɡoʊʃieɪt/",
+  "meaning": "v. 谈判；协商",
+  "example": "We negotiated a better price.",
+  "exampleZh": "我们谈到了更好的价格。"
+ },
+ {
+  "word": "opportunity",
+  "phonetic": "/ˌɑːpərˈtuːnəti/",
+  "meaning": "n. 机会",
+  "example": "Don't miss this opportunity.",
+  "exampleZh": "别错过这个机会。"
+ },
+ {
+  "word": "patient",
+  "phonetic": "/ˈpeɪʃnt/",
+  "meaning": "adj. 耐心的",
+  "example": "Be patient, it takes time.",
+  "exampleZh": "要有耐心，这需要时间。"
+ },
+ {
+  "word": "prefer",
+  "phonetic": "/prɪˈfɜːr/",
+  "meaning": "v. 更喜欢",
+  "example": "I prefer tea to coffee.",
+  "exampleZh": "比起咖啡我更喜欢茶。"
+ },
+ {
+  "word": "prepare",
+  "phonetic": "/prɪˈper/",
+  "meaning": "v. 准备",
+  "example": "I need to prepare for the meeting.",
+  "exampleZh": "我需要为会议做准备。"
+ },
+ {
+  "word": "previous",
+  "phonetic": "/ˈpriːviəs/",
+  "meaning": "adj. 以前的",
+  "example": "Check the previous high.",
+  "exampleZh": "看一下前高。"
+ },
+ {
+  "word": "profit",
+  "phonetic": "/ˈprɑːfɪt/",
+  "meaning": "n. 利润",
+  "example": "They made a small profit.",
+  "exampleZh": "他们赚了一点利润。"
+ },
+ {
+  "word": "promise",
+  "phonetic": "/ˈprɑːmɪs/",
+  "meaning": "n./v. 承诺",
+  "example": "I promise I'll be there.",
+  "exampleZh": "我保证会到。"
+ },
+ {
+  "word": "purchase",
+  "phonetic": "/ˈpɜːrtʃəs/",
+  "meaning": "n./v. 购买",
+  "example": "Keep the receipt for your purchase.",
+  "exampleZh": "请保留购物小票。"
+ },
+ {
+  "word": "quality",
+  "phonetic": "/ˈkwɑːləti/",
+  "meaning": "n. 质量",
+  "example": "Quality is more important than quantity.",
+  "exampleZh": "质量比数量更重要。"
+ },
+ {
+  "word": "receipt",
+  "phonetic": "/rɪˈsiːt/",
+  "meaning": "n. 收据",
+  "example": "Can I have a receipt, please?",
+  "exampleZh": "请给我一张收据好吗？"
+ },
+ {
+  "word": "recommend",
+  "phonetic": "/ˌrekəˈmend/",
+  "meaning": "v. 推荐",
+  "example": "What do you recommend?",
+  "exampleZh": "你推荐什么？"
+ },
+ {
+  "word": "reduce",
+  "phonetic": "/rɪˈduːs/",
+  "meaning": "v. 减少",
+  "example": "Reduce your position size.",
+  "exampleZh": "减小你的仓位。"
+ },
+ {
+  "word": "refund",
+  "phonetic": "/ˈriːfʌnd/",
+  "meaning": "n. 退款",
+  "example": "I'd like a refund.",
+  "exampleZh": "我想退款。"
+ },
+ {
+  "word": "regret",
+  "phonetic": "/rɪˈɡret/",
+  "meaning": "n./v. 后悔",
+  "example": "I regret selling too early.",
+  "exampleZh": "我后悔卖得太早了。"
+ },
+ {
+  "word": "reliable",
+  "phonetic": "/rɪˈlaɪəbl/",
+  "meaning": "adj. 可靠的",
+  "example": "Is this data reliable?",
+  "exampleZh": "这个数据可靠吗？"
+ },
+ {
+  "word": "remind",
+  "phonetic": "/rɪˈmaɪnd/",
+  "meaning": "v. 提醒",
+  "example": "Remind me to call him.",
+  "exampleZh": "提醒我给他打电话。"
+ },
+ {
+  "word": "reservation",
+  "phonetic": "/ˌrezərˈveɪʃn/",
+  "meaning": "n. 预订",
+  "example": "I have a reservation under Wang.",
+  "exampleZh": "我用王的名字订了位。"
+ },
+ {
+  "word": "risk",
+  "phonetic": "/rɪsk/",
+  "meaning": "n. 风险",
+  "example": "Never risk more than you can lose.",
+  "exampleZh": "永远不要冒超出承受能力的风险。"
+ },
+ {
+  "word": "schedule",
+  "phonetic": "/ˈskedʒuːl/",
+  "meaning": "n. 日程；时间表",
+  "example": "What's your schedule today?",
+  "exampleZh": "你今天的日程是什么？"
+ },
+ {
+  "word": "signal",
+  "phonetic": "/ˈsɪɡnəl/",
+  "meaning": "n. 信号",
+  "example": "The phone signal is weak here.",
+  "exampleZh": "这里手机信号很弱。"
+ },
+ {
+  "word": "similar",
+  "phonetic": "/ˈsɪmələr/",
+  "meaning": "adj. 相似的",
+  "example": "The two charts look similar.",
+  "exampleZh": "这两张图看起来很像。"
+ },
+ {
+  "word": "strategy",
+  "phonetic": "/ˈstrætədʒi/",
+  "meaning": "n. 策略",
+  "example": "We need a better strategy.",
+  "exampleZh": "我们需要更好的策略。"
+ },
+ {
+  "word": "suggest",
+  "phonetic": "/səˈdʒest/",
+  "meaning": "v. 建议",
+  "example": "I suggest we leave early.",
+  "exampleZh": "我建议我们早点出发。"
+ },
+ {
+  "word": "trend",
+  "phonetic": "/trend/",
+  "meaning": "n. 趋势",
+  "example": "The trend is your friend.",
+  "exampleZh": "趋势是你的朋友。"
+ },
+ {
+  "word": "unfortunately",
+  "phonetic": "/ʌnˈfɔːrtʃənətli/",
+  "meaning": "adv. 不幸地；可惜",
+  "example": "Unfortunately, the shop is closed.",
+  "exampleZh": "可惜店已经关门了。"
+ },
+ {
+  "word": "valuable",
+  "phonetic": "/ˈvæljuəbl/",
+  "meaning": "adj. 宝贵的；有价值的",
+  "example": "Time is valuable.",
+  "exampleZh": "时间很宝贵。"
+ },
+ {
+  "word": "volume",
+  "phonetic": "/ˈvɑːljuːm/",
+  "meaning": "n. 音量；成交量",
+  "example": "Can you turn down the volume?",
+  "exampleZh": "你能把音量调小吗？"
+ },
+ {
+  "word": "warning",
+  "phonetic": "/ˈwɔːrnɪŋ/",
+  "meaning": "n. 警告",
+  "example": "Pay attention to the warning signs.",
+  "exampleZh": "注意警示标志。"
+ },
+ {
+  "word": "worth",
+  "phonetic": "/wɜːrθ/",
+  "meaning": "adj. 值得的",
+  "example": "Is it worth the money?",
+  "exampleZh": "这值这个价吗？"
+ }
+]
