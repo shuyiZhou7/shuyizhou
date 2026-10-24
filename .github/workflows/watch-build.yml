@@ -1,0 +1,26 @@
+name: Build WatchClaude
+
+on:
+  push:
+    paths: ["WatchClaude/**", ".github/workflows/watch-build.yml"]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: macos-15
+    defaults:
+      run:
+        working-directory: WatchClaude
+    steps:
+      - uses: actions/checkout@v4
+      - name: Generate Xcode project
+        run: |
+          brew install xcodegen
+          xcodegen generate
+      - name: Build for watchOS Simulator
+        run: |
+          xcodebuild build \
+            -project WatchClaude.xcodeproj \
+            -scheme WatchClaude \
+            -destination 'generic/platform=watchOS Simulator' \
+            CODE_SIGNING_ALLOWED=NO

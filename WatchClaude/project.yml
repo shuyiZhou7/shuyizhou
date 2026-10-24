@@ -1,0 +1,20 @@
+name: WatchClaude
+options:
+  bundleIdPrefix: com.shuyizhou
+  deploymentTarget:
+    watchOS: "10.0"
+targets:
+  WatchClaude:
+    type: application
+    platform: watchOS
+    sources: [WatchClaude]
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.shuyizhou.WatchClaude
+        GENERATE_INFOPLIST_FILE: YES
+        INFOPLIST_KEY_CFBundleDisplayName: Claude
+        INFOPLIST_KEY_WKWatchOnly: YES
+        INFOPLIST_KEY_WKApplication: YES
+        SWIFT_VERSION: "5.0"
+        MARKETING_VERSION: "1.0"
+        CURRENT_PROJECT_VERSION: "1"
