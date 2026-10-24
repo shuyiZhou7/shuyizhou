@@ -37,7 +37,7 @@
    - 头部：`x-api-key` = 你的 Key；`anthropic-version` = `2026-10-21`；`content-type` = `application/json`
    - 请求体选 JSON：
      - `model`（文本）= `claude-opus-5-5`
-     - `max_tokens`（数字）= `2000`
+     - `max_tokens`（数字）= `8000`
      - `messages`（数组）→ 一个字典：`role` = `user`，`content` = 第 1 步的「听写的文本」
 3. **获取词典值**：键 `content`
 4. **从列表中获取项目**：选 **最后一项**（Claude 的思考块排在前面，最后一项才是回答文字）
